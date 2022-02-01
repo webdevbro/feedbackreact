@@ -1,0 +1,128 @@
+a {
+  color: $purple;
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+  &:hover {
+    color: lighten($purple, 10%);
+  }
+}
+
+.buttons {
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+}
+.reverse {
+  background-color: #141629 !important;
+  color: #d9f3ff !important;
+}
+.deleteIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.6rem;
+  color: lighten($blue, 20%);
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+  &:hover {
+    color: $blue;
+  }
+}
+.editIcon {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  font-size: 1.6rem;
+  color: lighten($red, 5%);
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+  &:hover {
+    color: $red;
+  }
+}
+.feedback-stats {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+.message {
+  padding-top: 10px;
+  text-align: center;
+  color: $darkGreen;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px 0px 40px;
+  li {
+    position: relative;
+    background: #f4f4f4;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 19px;
+    border: 1px solid #eeeeee;
+    transition: 0.2s;
+    input {
+      border-bottom-style: none;
+    }
+    label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      border-radius: 50%;
+      border: none;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      font-size: 1.8rem;
+    }
+    &:hover {
+      background: #ff6a95;
+      color: #ffffff;
+    }
+  }
+}
+[type="radio"] {
+  opacity: 0;
+}
+[type="radio"]:checked ~ label {
+  background: #ff6a95;
+  color: #ffffff;
+}
+@media (max-width: 600px) {
+  .rating li {
+    margin: 10px 3px;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0 40px;
+  }
+
+  .input-group input {
+    width: 80%;
+  }
+}
+.custom-message {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: lighten($blue, 40%);
+  text-align: center;
+}
